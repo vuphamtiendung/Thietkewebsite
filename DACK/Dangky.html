@@ -1,0 +1,605 @@
+<!doctype html>
+<html>
+	<head>
+		<link rel="stylesheet" type="text/css" href="../DACK/Script/Style.css">
+		<meta charset="utf-8">
+		<title>
+			Đăng ký
+		</title>
+		<script language="Javacript">
+			function Kiemtra()
+			{
+				var HoTen = window.document.dangky.txtHoTen.Value;
+				var Nam = window.document.dangky.txtNam.value;
+				var Email = window.document.dangky.txtEmail.value;
+				var UserName = window.document.dangky.txtTenDangNhap.value;
+				var Password = window.document.dangky.txtNhapLaiMatKhau.value;
+				var RePassWord = window.document.dangky.txtNhaplaimk.value;
+				if(Hoten.length == 0)
+					{
+						alert("Vui lòng nhập Họ tên:");
+						window.document.dangky.txtHoten.focus();
+						return false;
+					}
+				if(Nam.length == 0)
+					{
+						alert("Hãy điền Năm sinh:");
+						window.document.dangky.txtNam.focus();
+						return false;
+					}
+				if(isNaN(Nam) == true)
+					{
+						alert("Năm sinh phải là số.");
+						window.document.dangky.txtNam.value="";
+						document.dangky.txtNam.focus();
+						return false;
+					}
+				re=/\w+@\w+\.\w+/;
+				if(Email == "")
+					{
+						alert("Bạn chưa nhập Email.");
+						window.document.dangky.txtEmail.value = "";
+						document.dangky.txtEmail.focus();
+						return false;
+					}
+				else
+				{
+					if(re.test(Email)==false)
+						{
+							alert("Email không đúng định dạng!");
+							document.dangky.txtEmail.focus();
+							return false;
+						}
+				}
+				if(TenDangNhap.length==0)
+					{
+						alert("Hãy điền Tên đăng nhập.");
+						window.document.dangky.txtTenDangNhap.focus();
+						reuturn false;
+					}
+				if(PassWord.length==0)
+					{
+						alert("Hãy nhập mật khẩu.");
+						windows.document.dangky.txtMatkhau.focus();
+						return false;
+					}
+				if(RePassWord.length==0)
+					{
+						alert("Hãy nhập Nhập lại mật khẩu.");
+						window.document.dangky.txtNhaplaimatkhau.focus();
+						return false;
+					}
+				if(Password != RePassWord)
+					{
+						alert("Mật khẩu và nhập lại mật khẩu không trùng khớp!.");
+						window.document.dangky.txtNhaplaimatkhau.focus();
+						return false;
+					}
+				alert("Đăng ký thành công! Chúc mừng bạn.");
+				return true;
+			}
+		</script>
+	</head>
+	
+	<body>
+		<header>
+			<div id="logo">
+				<img src="../DACK/Images/Anh/Logo1.jpg" width="1200px" height="300px"/>
+			</div>
+			<div id="dn">
+				<img src="../DACK/Images/dangnhap.jpg"/>
+				<a href="Dangnhap.html">
+					Đăng nhập
+				</a> |
+				<a href="Dangky.html">
+					Đăng Ký
+				</a>
+				<a href="Giohang.html">
+					<img src="../DACK/Images/Giohang.gif" title="Giỏ Hàng"/>
+					Giỏ Hàng (<span>Trống</span>)
+				</a>
+			</div>
+		</header>
+		
+		<nav>
+			<div id="subnav">
+				<ul>
+					<li>
+						<a href="Trangchu.html">
+							Trang Chủ
+						</a>
+					</li>
+					<li>
+						<a href="Gioithieu.html">
+							Giới Thiệu
+						</a>
+					</li>
+					<li>
+						<a href="Lienhe.html">
+							Liên Hệ
+						</a>
+					</li>
+					<li>
+						<a href="Khuyenmai.html">
+							Khuyến Mãi
+						</a>
+					</li>
+					<div id="search">
+						<input type = "text" size = "35" name = "tsearch" placeholder="Hãy nhập tên sản phẩm cần tìm...">
+						<input type = "submit" value = "Tìm Sản Phẩm" Title = "Tìm Sản Phẩm"/>
+					</div>
+				</ul>
+			</div>
+		</nav>
+		
+		<div id="body">
+			<article>
+				<aside id="left">
+					<div class="menu">
+						<p>
+							Sản Phẩm Tin Dùng
+						</p>
+						<ul type="square">
+							<li>
+								<a href="#">
+									Giảm cân
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Thanh Giọng
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Quà Tặng
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Giải tỏa cơn buồn miệng
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Giải độc
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Giải nhiệt
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									An Toàn & Không chất tẩy trắng
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Sản Phẩm 100% từ thiên nhiên
+								</a>
+							</li>
+							<li>
+								<a href="#">
+									Thực phẩm bổ sung
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="menu">
+						<p>
+							Hướng Dẫn
+						</p>
+						<ul type="square">
+							<li>
+								<a href="Huongdansudung.html">
+									Hướng Dẫn Sử Dụng
+								</a>
+							</li>
+							<li>
+								<a href="Huongdanmuahang.html">
+									Hướng Dẫn Mua Hàng
+								</a>
+							</li>
+							<li>
+								<a href="Huongdanthanhtoan.html">
+									Hướng Dẫn Thanh Toán
+								</a>
+							</li>
+							<li>
+								<a href="Chinhsachgiaohang.html">
+									Chính Sách Giao Hàng
+								</a>
+							</li>
+						</ul>
+					</div>
+					
+					<div class="menu">
+						<p>
+							Sản Phẩm Tiêu Biểu
+						</p>
+						<ul>
+							<img src="../DACK/Images/Anh/Nhansaydeo.jpg">
+						</ul>
+						<ul>
+							<img src="../DACK/Images/Anh/Vobuoisaydeo.jpg">
+						</ul>
+					</div>
+					
+				</aside>
+				
+				<!--Nội dung chính (placehoder)-->
+				<section>
+					<form id="dangky" action="#" method="post" name = "dangky" align = "center" margin="100px" onSubmit="return Kiemtra()">
+						<p style="width: 430px; padding: 10px;">
+							<b>
+								ĐĂNG KÝ THÀNH VIÊN
+							</b>
+						</p>
+						<fieldset style="width:400px; align:center; padding: 20px;">
+							<legend align = "center">
+								<b>
+									Thông tin cá nhân
+								</b>
+							</legend>
+							<table>
+								<tr>
+									<td>
+										Họ và tên:
+									</td>
+									<td>
+										<input type="text" name="txtHoTen" size="30">
+									</td>
+								</tr>
+								<tr>
+									<td>
+										Ngày sinh:
+									</td>
+									<td>
+										<select name="Ngày">
+											<option value="01" selected>
+												01
+											</option>
+											<option value="02">
+												02
+											</option>
+											<option value="03">
+												03
+											</option>
+											<option value="04">
+												04
+											</option>
+											<option value="05">
+												05
+											</option>
+											<option value="06">
+												06
+											</option>
+											<option value="07">
+												07
+											</option>
+											<option value="08">
+												08
+											</option>
+											<option value="08">
+												08
+											</option>
+											<option value="09">
+												09
+											</option>
+											<option value="10">
+												10
+											</option>
+											<option value="11">
+												11
+											</option>
+											<option value="12">
+												12
+											</option>
+											<option value="13">
+												13
+											</option>
+											<option value="14">
+												14
+											</option>
+											<option value="15">
+												15
+											</option>
+											<option value="16">
+												16
+											</option>
+											<option value="17">
+												17
+											</option>
+											<option value="18">
+												18
+											</option>
+											<option value="19">
+												19
+											</option>
+											<option value="20">
+												20
+											</option>
+											<option value="21">
+												21
+											</option>
+							<option value="22">
+								22
+							</option>
+							<option value="23">
+								23
+							</option>
+							<option value="24">
+								24
+							</option>
+							<option value="25">
+								25
+							</option>
+							<option value="26">
+								26
+							</option>
+							<option value="27">
+								27
+							</option>
+							<option value="28">
+								28
+							</option>
+							<option value="29">
+								29
+							</option>
+							<option value="30">
+								30
+							</option>
+							<option value="31">
+								31
+							</option>
+						</select>
+						&nbsp;Tháng
+						<select name="Tháng">
+							<option value="01" selected>
+								01
+							</option>
+							<option value="02">
+								02
+							</option>
+							<option value="03">
+								03
+							</option>
+							<option value="04">
+								04
+							</option>
+							<option value="05">
+								05
+							</option>
+							<option value="06">
+								06
+							</option>
+							<option value="07">
+								07
+							</option>
+							<option value="08">
+								08
+							</option>
+							<option value="09">
+								09
+							</option>
+							<option value="10">
+								10
+							</option>
+							<option value="11">
+								11
+							</option>
+							<option value="12">
+								12
+							</option>
+						</select>
+						&nbsp;Năm
+						<input type="text" name="Nam" Size="5">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Giới tính:
+						</td>
+						<td>
+							<input type="radio" name="radGioitinh" value="nam" checked>
+							&nbsp;Nam
+							<input type="radio" name="radGioitinh" value="nữ" checked>
+							&nbsp;Nữ
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Địa chỉ:
+						</td>
+						<td>
+							<textarea name="txtDiachi" rows="3" cols="32">
+							</textarea>
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Điện thoại:
+						</td>
+						<td>
+							<input type="text" name="txtDienthoai" Size="30">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Email:
+						</td>
+						<td>
+							<input type="text" name="txtEmail" size="30">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<fieldset style="width:415px; align: center;">
+				<legend>
+					<b>
+						Thông tin đăng nhập
+					</b>
+				</legend>
+				<table align = "center">
+					<tr>
+						<td>
+							Tên đăng nhập:
+						</td>
+						<td>
+							<input type="text" name="txtTendangnhap">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Mật khẩu:
+						</td>
+						<td>
+							<input type="text" name="txtMatkhau">
+						</td>
+					</tr>
+					<tr>
+						<td>
+							Nhập lại mật khẩu:
+						</td>
+						<td>
+							<input type="text" name="txtNhaplaimk">
+						</td>
+					</tr>
+				</table>
+			</fieldset>
+			<table style="width:450px; padding: 10px;">
+				<tr>
+					<td colspan="2" align="center">
+						<input type="submit" value="Đăng ký" name="btnDangky">
+						<input type="submit" value="Hủy" name="btnHuy">
+					</td>
+				</tr>
+			</table>
+		</form>
+				</section>
+				<!--kết thúc nội dung chính-->
+				
+				<aside id="right">
+					<div id="sanphammuanhieu">
+						<p>
+							Sản Phẩm Bán Chạy
+						</p>
+						<marquee direction="up" scrollamount="4" scrolldelay="150" onMouseMove="stop()" onMouseOut="start()">
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/xoaicatsaydeo.jpg">
+									Xoài Cát Sấy Dẻo
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/vobuoisay2.jpg">
+									Vỏ Bưởi Sấy
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Vobuoisaydeo.jpg">
+									Vỏ Bưởi Sấy Dẻo
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Chanhdaysaydeo.jpg">
+									Chanh Dây Sấy Dẻo
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Nhansay.jpg">
+									Nhãn Sấy
+								</a>
+							</p>
+						</marquee>
+						<p>
+							Sản Phẩm Nổi Bật
+						</p>
+						<marquee direction="up" scrollamount="4" scrolldelay="150" onMouseMove="stop()" onMouseOut="start()">
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/vobuoisay.jpg">
+									Vỏ Bưởi Sấy
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Travobuoi.jpg">
+									Trà Vỏ Bưởi
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/thomsaydeo.jpg">
+									Thơm Sấy Dẻo
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Traicaysay_detox.jpeg">
+									Trái Cây Sấy - Detox
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/xoaicatsaydeo.jpg">
+									Xoài Cát Sấy Dẻo
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Nhansay.jpg">
+									Nhãn Sấy
+								</a>
+							</p>
+							<p>
+								<a href="#">
+									<img src="../DACK/Images/Anh/Vobuoisaydeo.jpg">
+									Vỏ Bưởi Sấy Dẻo
+								</a>
+							</p>
+						</marquee>
+					</div>
+					<div>
+						<p height="30px">
+							LIÊN KẾT WEBSITE
+						</p>
+						<select onChange="wondow.open(this.option[this.selectedIndex].value,'_blank')"><br>
+							<option selected="selected">
+								----------------------- Liên Kết --------------------------
+							</option>
+							<option value="https://traicaysaysafovi.com/">
+								Công Ty Cổ Phần Safovi
+							</option>
+						</select>
+					</div>
+					<div id="soluongtruycap">
+						<p>
+							THỐNG KÊ TRUY CẬP
+						</p>
+						<h4>
+							Tổng Truy Cập : 160
+						</h4>
+						<h4>
+							Đang Online: 3
+						</h4>
+					</div>
+				</aside>
+			</article>
+		</div>
+		
+		<!-- Phần Footer-->
+		<footer>
+			<p>
+				Với tình yêu và tâm huyết dành cho Safovi, tôi hy vọng rằng Trái Cây Sấy Safovi sẽ luôn là người bạn đồng hành tốt nhất (không chỉ với tôi mà với bạn, với gia đình bạn, với tất cả mọi người, mọi nhà, với bạn bè Thế Giới). Cám ơn bạn vì bạn là một phần của Safovi.
+			</p>
+		</footer>
+	</body>
+</html>
